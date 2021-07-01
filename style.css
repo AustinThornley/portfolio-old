@@ -1,13 +1,17 @@
 body {
 	background-color: rgba(0, 0, 0, 0.2);
-  }
+}
   
-  button {
+button {
 	background-color: rgba(0, 127, 194, 1);
 	outline: none;
-  }
+}
   
-  input {
+input {
 	outline: none;
-  }
-  
+}
+
+.container {
+	display: block;
+	text-align: center;
+}
