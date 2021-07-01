@@ -1,0 +1,13 @@
+body {
+	background-color: rgba(0, 0, 0, 0.2);
+  }
+  
+  button {
+	background-color: rgba(0, 127, 194, 1);
+	outline: none;
+  }
+  
+  input {
+	outline: none;
+  }
+  
