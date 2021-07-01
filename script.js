@@ -3,7 +3,16 @@ let dailyAudits;
 let dailyHours;
 let currentAudits;
 let hoursWorked;
+let onTrack;
 // gets data from the user input
+
+function displayValues() {
+	dailyAudits = document.getElementById('dailyAudits').value;
+	dailyHours = document.getElementById('dailyHours').value;
+	currentAudits = document.getElementById('currentAudits').value;
+	hoursWorked = document.getElementById('hoursWorked').value;
+	checkAudits(dailyAudits,dailyHours,currentAudits,hoursWorked);
+}
 
 function checkAudits(dailyAudits, dailyHours, currentAudits, hoursWorked) {
   let auditsPerHour = dailyAudits / dailyHours;
@@ -12,22 +21,36 @@ function checkAudits(dailyAudits, dailyHours, currentAudits, hoursWorked) {
   let parsedInt = parseInt(secondsDecimal); // gets after the decimal point
   let firstNum = Math.trunc(timePerAudit); // gets first num
 
-  console.log(
-    `You will need to do 1 audit every ${firstNum} minutes and ${parsedInt} seconds.`
-  );
+//   console.log(
+//     `You will need to do 1 audit every ${firstNum} minutes and ${parsedInt} seconds in order to hit ${dailyAudits} audits in a ${dailyHours} hour shift.`
+//   );
 
   // Checks whether or not you are on track
   if (currentAudits < auditsPerHour * hoursWorked) {
-    console.log('Go faster!');
+    // console.log('Go faster!');
+	onTrack = `Go faster!`;
   } else {
-    console.log('Looking great!');
+    // console.log('Looking great!');
+	onTrack = `Looking great!`;
   }
+
+//   console.log(`Daily Audits: ${dailyAudits}`);
+//   console.log(`Daily Hours: ${dailyHours}`);
+//   console.log(`Current Audits: ${currentAudits}`);
+//   console.log(`Hours Worked: ${hoursWorked}`);
+
+  document.getElementById('speed').textContent = `${onTrack}`
+  document.getElementById('results').textContent = `You will need to do 1 audit every ${firstNum} minutes and ${parsedInt} seconds in order to hit ${dailyAudits} audits in a ${dailyHours} hour shift.`;
+  document.getElementById('results2').textContent = `Daily Audits: ${dailyAudits} Daily Hours: ${dailyHours} Current Audits: ${currentAudits} Hours Worked: ${hoursWorked}`;
+  // 120 , 6, 80 , 4
+
+  //set text content of a div to this string `You will need to do 1 audit every ${firstNum} minutes and ${parsedInt} seconds in order to hit ${dailyAudits} audits in a ${dailyHours} hour shift.`
 }
 
 // Put numbers in between () separated by commas. Ex: 120,6,38,2.2
 // Order is Daily Audit Goal, Daily Hours, Current Audits, and Hours worked so far.
 // Output will be on the right and tell you how often you need to do an audit and will also tell you if you are on track or not.
-checkAudits(120, 6, 80, 4);
+// checkAudits(120, 6, 80, 4);
 
 //possibly get param of shiftstarttime and use current time to print out how many audits should be done at x time
 
