@@ -6,6 +6,8 @@ let hoursWorked;
 let onTrack;
 // gets data from the user input
 
+// add output for hourlyRate
+
 function displayValues() {
 	dailyAudits = document.getElementById('dailyAudits').value;
 	dailyHours = document.getElementById('dailyHours').value;
