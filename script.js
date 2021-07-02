@@ -10,6 +10,7 @@ let onTrack;
 //adding output for HourlyRate, plus github link to code
 //this is the dev branch
 
+
 function displayValues() {
 	dailyAudits = document.getElementById('dailyAudits').value;
 	dailyHours = document.getElementById('dailyHours').value;
