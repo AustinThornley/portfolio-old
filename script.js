@@ -8,6 +8,7 @@ let onTrack;
 
 // add output for hourlyRate
 
+
 function displayValues() {
 	dailyAudits = document.getElementById('dailyAudits').value;
 	dailyHours = document.getElementById('dailyHours').value;
