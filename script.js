@@ -7,6 +7,10 @@ let onTrack;
 // gets data from the user input
 
 // test
+// add output for hourlyRate
+//adding output for HourlyRate, plus github link to code
+//this is the dev branch
+
 
 function displayValues() {
 	dailyAudits = document.getElementById('dailyAudits').value;
