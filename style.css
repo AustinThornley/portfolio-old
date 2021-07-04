@@ -1,10 +1,12 @@
 body {
-	background-color: rgba(0, 0, 0, 0.2);
+	/* background-color: rgba(0, 0, 0, 0.2); */
+	background-color: #DCE1E3;
 }
   
 button {
-	background-color: rgba(0, 127, 194, 1);
-	outline: none;
+	/* background-color: rgba(0, 127, 194, 1); */
+	background-color: #004E7C;
+	color: white;
 }
   
 input {
@@ -14,4 +16,12 @@ input {
 .container {
 	display: block;
 	text-align: center;
+}
+
+footer {
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	/* background-color:; */
 }
