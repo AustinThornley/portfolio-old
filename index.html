@@ -11,34 +11,28 @@
   </head>
   <body>
     <div class="container">
-		<input type="text" id ="dailyAudits" placeholder="Daily Audits" />
-		<input type="text" id="dailyHours" placeholder="Daily Hours" />
-		<input type="text" id="currentAudits" placeholder="Current Audits" />
-		<input type="text" id="hoursWorked" placeholder="Hours Worked" />
-		<button type="submit" onclick="getValues()">Submit</button>
-	</div>	
-	<div id="speed">
-		
-	</div>
-	<br />
-	<div id="results">
-
-	</div>
-	<br />
-	<div id="results2">
-
-	</div>
+      <input type="text" id="dailyAudits" placeholder="Daily Audits" />
+      <input type="text" id="dailyHours" placeholder="Daily Hours" />
+      <input type="text" id="currentAudits" placeholder="Current Audits" />
+      <input type="text" id="hoursWorked" placeholder="Hours Worked" />
+      <button type="submit" onclick="getValues()">Submit</button>
+    </div>
 
 	<hr>
 
-    <!-- <div class="container">
-		<input type="text" id ="dailyAudits" placeholder="-" />
-		<input type="text" id="dailyHours" placeholder="-" />
-		<input type="text" id="currentAudits" placeholder="-" />
-		<input type="text" id="hoursWorked" placeholder="-" />
-		<button type="submit" onclick="getValues()">Submit</button>
-	</div>	 -->
-	<footer><span>&copy;Austin Thornley 2021</span></footer>
+    <div id="results">
+      <div class="row" id="onTrack"></div>
+      <div class="row" id="auditString"></div>
+      <div class="row" id="dailyAuditsVal"></div>
+      <div class="row" id="dailyHoursVal"></div>
+      <div class="row" id="currentAuditsVal"></div>
+      <div class="row" id="hoursWorkedVal"></div>
+      <div class="row" id="auditsPerHourVal"></div>
+    </div>
+
+
+	<hr>
+    <footer><span>&copy;Austin Thornley 2021</span></footer>
     <script src="script.js"></script>
   </body>
 </html>
