@@ -1,3 +1,5 @@
+"use strict";
+
 /*
 
 This program can check how often you need to do an audit to reach a daily goal. It will also tell you if you are on track or not.
@@ -11,6 +13,8 @@ let dailyHours;
 let currentAudits;
 let hoursWorked;
 let onTrack;
+let monthlyAudits;
+let monthlyHours;
 
 // grabs all values from input on fields onClick
 function getValues() {
@@ -18,10 +22,11 @@ function getValues() {
   dailyHours = document.getElementById('dailyHours').value;
   currentAudits = document.getElementById('currentAudits').value;
   hoursWorked = document.getElementById('hoursWorked').value;
+  // runs checkAudits function below
   checkAudits(dailyAudits, dailyHours, currentAudits, hoursWorked);
 }
 
-//function calculates all audit stats
+//function calculates all audit stats and outputs on page
 function checkAudits(dailyAudits, dailyHours, currentAudits, hoursWorked) {
   let auditsPerHour = dailyAudits / dailyHours;
   let timePerAudit = 60 / auditsPerHour;
@@ -45,4 +50,11 @@ function checkAudits(dailyAudits, dailyHours, currentAudits, hoursWorked) {
   document.getElementById('currentAuditsVal').textContent = `Current Audits: ${currentAudits}`;
   document.getElementById('hoursWorkedVal').textContent = `Hours Worked: ${hoursWorked}`;
   document.getElementById('auditsPerHourVal').textContent = `Hourly Audits Goal: ${auditsPerHour}`;
+}
+
+// do not forget to calc in breaks/meetings/lunches, etc.
+// maybe if dailyHours >= 7, exclude two 15 min breaks and one 30 min lunch
+function calcMonthlyAverage (monthlyAudits, monthlyHours) {
+	monthlyHours = 0;
+	monthlyAudits = 0;
 }
