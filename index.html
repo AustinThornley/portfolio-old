@@ -30,12 +30,16 @@
       <div class="row" id="auditsPerHourVal"></div>
     </div>
 
-
-	<hr>
 	<div class="container">
 		<input type="text" id="monthlyAudits" placeholder="Monthly Audits (so far)">
 		<input type="text" id="monthlyHours" placeholder="Monthly Hours (so far)">
-		<button type="submit">Submit</button>
+		<button type="submit" onclick="calcMonthlyAverage()">Submit</button>
+	</div>
+
+	<div id="results">
+		<div class="row" id="monthlyAuditsVal"></div>
+		<div class="row" id="monthlyHoursVal"></div>
+		<div class="row" id="monthlyAverageVal"></div>
 	</div>
     <footer><span>&copy;Austin Thornley 2021</span></footer>
     <script src="script.js"></script>

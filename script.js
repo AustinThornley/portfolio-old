@@ -15,6 +15,7 @@ let hoursWorked;
 let onTrack;
 let monthlyAudits;
 let monthlyHours;
+let monthlyAverage;
 
 // grabs all values from input on fields onClick
 function getValues() {
@@ -54,7 +55,18 @@ function checkAudits(dailyAudits, dailyHours, currentAudits, hoursWorked) {
 
 // do not forget to calc in breaks/meetings/lunches, etc.
 // maybe if dailyHours >= 7, exclude two 15 min breaks and one 30 min lunch
+
+monthlyHours = 0;
+monthlyAudits = 0;
+monthlyAverage = 0;
+
+
 function calcMonthlyAverage (monthlyAudits, monthlyHours) {
-	monthlyHours = 0;
-	monthlyAudits = 0;
+	monthlyAudits = document.getElementById('monthlyAudits').value;
+	monthlyHours = document.getElementById('monthlyHours').value;
+	monthlyAverage = monthlyAudits / monthlyHours;
+
+	document.getElementById('monthlyAuditsVal').textContent = `Monthly audits (MTD): ${monthlyAudits}`;
+	document.getElementById('monthlyHoursVal').textContent = `Monthly hours (MTD): ${monthlyHours}`;
+	document.getElementById('monthlyAverageVal').textContent = `Your average hourly audit rate is: ${monthlyAverage} per hour.`;
 }
