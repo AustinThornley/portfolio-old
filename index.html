@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>JS Audits</title>
+    <title>Audit Calculator App</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap"
       rel="stylesheet"
@@ -10,6 +10,19 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+
+	<!-- consolidate below script into js -->
+	<script>
+		document.addEventListener("keyup", function(event) {
+			if (event.key === "Enter") {
+				getValues()
+				calcMonthlyAverage()
+				console.log('enter');
+			} else {
+				console.log(error); //make into error message
+			}
+		});
+	</script>
 
 	<div class="header">
 		<h2>Audit Calculator</h2>
@@ -34,6 +47,7 @@
       <div class="row" id="currentAuditsVal"></div>
       <div class="row" id="hoursWorkedVal"></div>
       <div class="row" id="auditsPerHourVal"></div>
+	  <div class="row" id="currentAuditSpeedVal"></div>
     </div>
 
 	<hr>

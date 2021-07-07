@@ -16,6 +16,12 @@ let onTrack;
 let monthlyAudits;
 let monthlyHours;
 let monthlyAverage;
+let currentAuditSpeed;
+let auditsPerHour;
+let timePerAudit;
+let secondsDecimal;
+let parsedInt;
+let firstNum;
 
 // grabs all values from input on fields onClick
 function getValues() {
@@ -29,11 +35,12 @@ function getValues() {
 
 //function calculates all audit stats and outputs on page
 function checkAudits(dailyAudits, dailyHours, currentAudits, hoursWorked) {
-  let auditsPerHour = dailyAudits / dailyHours;
-  let timePerAudit = 60 / auditsPerHour;
-  let secondsDecimal = (timePerAudit % 1) * 60;
-  let parsedInt = parseInt(secondsDecimal); // gets after the decimal point
-  let firstNum = Math.trunc(timePerAudit); // gets first num
+	auditsPerHour = dailyAudits / dailyHours;
+	timePerAudit = 60 / auditsPerHour;
+	secondsDecimal = (timePerAudit % 1) * 60;
+	parsedInt = parseInt(secondsDecimal); // gets after the decimal point
+	firstNum = Math.trunc(timePerAudit); // gets first num
+	currentAuditSpeed = currentAudits / hoursWorked;
 
   // Checks whether or not you are on track
   if (currentAudits < auditsPerHour * hoursWorked) {
@@ -51,6 +58,7 @@ function checkAudits(dailyAudits, dailyHours, currentAudits, hoursWorked) {
   document.getElementById('currentAuditsVal').textContent = `Current Audits: ${currentAudits}`;
   document.getElementById('hoursWorkedVal').textContent = `Hours Worked: ${hoursWorked}`;
   document.getElementById('auditsPerHourVal').textContent = `Hourly Audits Goal: ${auditsPerHour}`;
+  document.getElementById('currentAuditSpeedVal').textContent = `Current Average Hourly Speed: ${currentAuditSpeed} per hour.`
 }
 
 // do not forget to calc in breaks/meetings/lunches, etc.
