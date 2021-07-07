@@ -1,10 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+
+* {
+	font-family: 'Noto Sans', sans-serif;
+}
+
 body {
 	/* background-color: rgba(0, 0, 0, 0.2); */
 	background-color: #DCE1E3;
 }
-  
+
+.header h2 {
+	text-align: center;
+}
+
+#header-hr {
+	width: 90%;
+	background-color: #004E7C;
+	margin-left: auto;
+	margin-right: auto;
+	border-bottom: .5rem solid #004E7C;
+}
+
 input {
-	outline: none;
+	border: 3px solid lightgray;
+	padding: 10px 15px;
+	box-sizing: border-box;
+	text-align: center;
+}
+
+input:focus {
+	border: 3px solid #004E7C;
 }
 
 .container {
@@ -20,12 +45,11 @@ footer {
 	/* background-color:; */
 }
 
-input[type=button],
 button[type=submit] {
   background-color: #004E7C;
   border: none;
   color: #fff;
-  padding: 4px 7px;
+  padding: 11px 15px;
   text-decoration: none;
   margin: 4px 2px;
   cursor: pointer;
@@ -33,6 +57,14 @@ button[type=submit] {
 
 button[type=submit]:hover {
 	background-color: #002d47;
+}
+
+hr {
+	width: 75%;
+	background-color: #004E7C;
+	margin-left: auto;
+	margin-right: auto;
+	border-bottom: .2rem solid #004E7C;
 }
 
 /*
