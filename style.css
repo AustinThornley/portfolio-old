@@ -67,6 +67,10 @@ hr {
 	border-bottom: .2rem solid #004E7C;
 }
 
+#results {
+	height: 10rem;
+	text-align: center;
+}
 /*
 	todo: add borders to input boxes on active
 */
