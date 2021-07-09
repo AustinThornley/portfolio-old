@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+
+/*
+	todo: add borders to input boxes on active
+	put colors in comment at top of css
+	also sort ur css you madman
+*/
+
+* {
+	font-family: 'Noto Sans', sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	/* background-color: #DCE1E3; */
+	background-color: #F7F7F7;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	overflow: hidden;
+	margin: 0;
+}
+
+.header h2 {
+	text-align: center;
+}
+
+#header-hr {
+	width: 90%;
+	/* background-color: #004E7C; */
+	background-color: #2980B9;
+	margin-left: auto;
+	margin-right: auto;
+	border-bottom: .5rem solid #2980B9;
+}
+
+input {
+	border: 3px solid lightgray;
+	padding: 10px 15px;
+	box-sizing: border-box;
+	text-align: center;
+}
+
+/* input:focus {
+	border: 3px solid #2980B9;
+} */
+
+.container {
+	display: block;
+	text-align: center;
+}
+
+footer {
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	/* background-color:; */
+}
+
+.calcButton {
+  background-color: #2980B9;
+  border: none;
+  color: #fff;
+  padding: 11px 15px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.calcButton:hover {
+	/* background-color: #002d47; */
+	background-color: #3299df;
+}
+
+hr {
+	width: 75%;
+	background-color: #2980B9;
+	margin-left: auto;
+	margin-right: auto;
+	border-bottom: .2rem solid #2980B9;
+}
+
+#results {
+	height: 12rem;
+	text-align: center;
+}
+
+
+/* Background styles */
+.bg {
+	background: url("https://images.pexels.com/photos/428429/pexels-photo-428429.jpeg?cs=srgb&dl=pexels-spencer-selover-428429.jpg&fm=jpg")
+		no-repeat center center/cover;
+	position: absolute;
+	width: calc(100vw);
+	height: calc(100vh);
+	z-index: -1;
+	filter: blur(0px);
+}
+
+.footer-logo {
+	color: #8e8e8e4f;
+}
+
+.landing-button {
+	background-color: #466678;
+	border: none;
+	color: #fff;
+	padding: 11px 15px;
+	text-decoration: none;
+	margin: 4px 2px;
+	cursor: pointer;
+	font-weight: bold;
+}
+
+.landing-button:hover {
+	background-color: #546C88;
+}
+
+.landing-button-link {
+	text-decoration: none;
+	color: #fff;
+}
