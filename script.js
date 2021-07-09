@@ -84,5 +84,6 @@ function calcMonthlyAverage (monthlyAudits, monthlyHours) {
 
 this is a test
 this is also a test lol
+test3
 
 */
