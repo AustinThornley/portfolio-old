@@ -78,12 +78,3 @@ function calcMonthlyAverage (monthlyAudits, monthlyHours) {
 	document.getElementById('monthlyHoursVal').textContent = `Monthly hours (MTD): ${monthlyHours}`;
 	document.getElementById('monthlyAverageVal').textContent = `Your average hourly audit rate is: ${monthlyAverage} per hour.`;
 }
-
-/*
-
-
-this is a test
-this is also a test lol
-test3
-
-*/
