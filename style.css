@@ -1,7 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
 
+/*
+	todo: add borders to input boxes on active
+	put colors in comment at top of css
+	also sort ur css you madman
+*/
+
 * {
 	font-family: 'Noto Sans', sans-serif;
+	margin: 0;
+	padding: 0;
 }
 
 body {
@@ -74,7 +82,18 @@ hr {
 	height: 12rem;
 	text-align: center;
 }
-/*
-	todo: add borders to input boxes on active
-	put colors in comment at top of css
-*/
+
+
+/* Background styles */
+.bg {
+	background: url("https://images.pexels.com/photos/428429/pexels-photo-428429.jpeg?cs=srgb&dl=pexels-spencer-selover-428429.jpg&fm=jpg")
+		no-repeat center center/cover;
+	width: calc(100vw);
+	height: calc(100vh);
+	z-index: -1;
+	filter: blur(0px);
+}
+
+.footer-logo {
+	color: #8e8e8e4f;
+}
