@@ -67,6 +67,8 @@ html,body {
 	border: solid #a7a4a4 3px; 
 }
 
+
+/* Makes adjustment per screen size */
 @media screen and (max-width: 768px) {
 	.content h1 {
 		font-size: 250%;
