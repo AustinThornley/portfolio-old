@@ -26,7 +26,7 @@ html,body {
 	height: 100%;
 	width: 100%;
 	margin: auto;
-	background: url(https://web.archive.org/web/20170226144232if_/https://static.pexels.com/photos/26206/pexels-photo.jpg) no-repeat 50% 50%;
+	background: url("../img/portfolio_background.jpg") no-repeat 50% 50%;
 	display: table;
 	top: 0;
 	background-size: cover;
