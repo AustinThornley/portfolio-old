@@ -16,55 +16,39 @@ html,body {
 	overflow: hidden;
 }
 
-/*
-
-//////////////////// Landing Page Styles ////////////////////
-
-*/
-
-.intro {
-	height: 100%;
-	width: 100%;
-	margin: auto;
-	background: url("../img/portfolio_background.jpg") no-repeat 50% 50%;
-	display: table;
-	top: 0;
-	background-size: cover;
-}
-
-.intro .inner {
-	display: table-cell;
-	vertical-align: middle;
-	width: 100%;
-	max-width: none;
-}
-.content {
-	max-width: 500px;
-	margin: 0 auto;
+header h1 {
 	text-align: center;
+	margin: 0;
 }
 
-.content h1 {
-	font-family: 'Raleway', sans-serif;
-	color: #F9F3F4;
-	text-shadow: 0px 0px 300px #000;
-	font-size: 350%;
+main {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	background: url("https://images.pexels.com/photos/428429/pexels-photo-428429.jpeg?cs=srgb&dl=pexels-spencer-selover-428429.jpg&fm=jpg")
+	no-repeat center center/cover;
+	width: calc(100vw);
+	height: calc(100vh);
+	z-index: -1;
+	filter: blur(0px);
 }
-.btn {
-	border-radius: 9px;
-	font-family: 'Oswald', sans-serif;
-	color: #036A81;
-	font-size: 90%;
-	padding: 10px 20px;
-	border: solid #036A81 3px;
-	text-transform: uppercase;
+
+main button {
+	background-color: #373b69;
+	border: none;
+	padding: 1rem;
+	margin: 1rem;
+}
+
+main a {
+	background-color: #373b69;
 	text-decoration: none;
+	color: white;
 }
 
-/* not final colors for hover  */
-.btn:hover {
-	color: #929292;
-	border: solid #929292 3px; 
+main a:hover {
+	color: gray;
 }
 
 footer {
@@ -76,14 +60,7 @@ footer {
 	color: #a7a4a4;
 }
 
-
-/* Makes adjustment per screen size */
-@media screen and (max-width: 768px) {
-	.content h1 {
-		font-size: 250%;
-	}
-	.btn {
-		font-size: 110%;
-		padding: 7px 15px;
-	}
-}
+.break {
+	flex-basis: 100%;
+	height: 0;
+  }
