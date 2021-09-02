@@ -7,60 +7,78 @@
 
 */
 
-html,body {
-	font-family: 'Noto Sans', sans-serif;
-	margin: 0;
-	padding: 0;
-	height: 100%;
-	width: 100%;
-	overflow: hidden;
+* {
+  font-family: 'Noto Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-header h1 {
-	text-align: center;
-	margin: 0;
+h1 {
+  color: white;
 }
 
-main {
-	display: flex;
-	flex-wrap: wrap;
-	align-items: center;
-	justify-content: center;
-	background: url("https://images.pexels.com/photos/428429/pexels-photo-428429.jpeg?cs=srgb&dl=pexels-spencer-selover-428429.jpg&fm=jpg")
-	no-repeat center center/cover;
-	width: calc(100vw);
-	height: calc(100vh);
-	z-index: -1;
-	filter: blur(0px);
+.container {
+  background: url('https://images.pexels.com/photos/428429/pexels-photo-428429.jpeg?cs=srgb&dl=pexels-spencer-selover-428429.jpg&fm=jpg')
+    no-repeat center center/cover;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: column;
+  justify-content: center;
+  align-content: center;
+  justify-items: center;
+  align-items: center;
+  grid-template-areas:
+    '. My-Projects My-Projects .'
+    'Project-1 Project-2 Project-3 Project-4'
+    '. . . .';
 }
 
-main button {
-	background-color: #373b69;
-	border: none;
-	padding: 1rem;
-	margin: 1rem;
+.Project-1 {
+  grid-area: Project-1;
 }
 
-main a {
-	background-color: #373b69;
-	text-decoration: none;
-	color: white;
+.Project-2 {
+  grid-area: Project-2;
 }
 
-main a:hover {
-	color: gray;
+.Project-3 {
+  grid-area: Project-3;
+}
+
+.My-Projects {
+  grid-area: My-Projects;
+}
+
+.Project-4 {
+  grid-area: Project-4;
+}
+
+button {
+  background-color: #373b69;
+  border: none;
+  padding: 1rem;
+  margin: 1rem;
+}
+
+a {
+  background-color: #373b69;
+  text-decoration: none;
+  color: white;
+}
+
+a:hover {
+  color: gray;
 }
 
 footer {
-	position: fixed;
-	left: 0;
-	bottom: 0;
-	width: 100%;
-	font-family: 'Oswald' sans-serif;
-	color: #a7a4a4;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  font-family: 'Oswald' sans-serif;
+  color: #a7a4a4;
 }
-
-.break {
-	flex-basis: 100%;
-	height: 0;
-  }
